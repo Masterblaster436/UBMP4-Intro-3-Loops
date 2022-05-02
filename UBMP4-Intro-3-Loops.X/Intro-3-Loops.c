@@ -76,14 +76,23 @@ int main(void)
  *    loop. What condition is being evaluated inside this while statement's
  *    brackets? How many times will the contents of this inner loop run?
  * 
+      The condition being evaluated is, while PWNperiod does not equal 0.
+      The contents of this loop will also run an unlimited amount of times.
+ 
  * 3. What condition is being evaluated by the if statement inside the loop?
  *    What happens when the if condition is true?
  * 
+      If LED4's brightness is equal to PWNperiod. If the condition is true, 
+      LED4 returns to its default brightness.
+ 
  * 4. Pressing the up or down buttons (SW3 and SW2) will increase or decrease
  *    the brightness of LED D4 using PWM (Pulse-Width Modulation). How many 
  *    different brightnesses can the LED have? What would the step size of one
  *    brightness level change be if it was expressed as a percentage?
  * 
+      There are 256 different brightnesses the LED can have. The step size of one
+      brightness level change would be 2.56 if expressed as a percentage (256 divided by 100).
+ 
  * 5. The while loop needs three statements to perform its function. First, the
  *    assignment statement 'PWMperiod = 255;' sets the PWMperiod variable. Next,
  *    the condition 'while(PWMperiod != 0)' runs the contents of the loop code
