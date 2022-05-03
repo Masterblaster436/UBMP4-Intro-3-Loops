@@ -122,6 +122,8 @@ int main(void)
         
  *    What is an advantage of using a for loop instead of a while loop?
  * 
+      A for loop can have all its statements on one line in between brackets.
+ 
  * 6. The 'for' loop, above, redefines the PWMperiod variable in the 
  *    initialization statement: 'for(unsigned char PWMperiod = 255; ...'
  * 
@@ -150,6 +152,8 @@ int main(void)
  *    inside the for loop will count down from 255 to 0, and should be 0 when
  *    the loop finishes. Is LED D5 lit? What must the value of PWMperiod be?
  * 
+      Yes, LED D5 is lit. The value of PWNperiod remains as 128.
+ 
  *    Can you remove the global PWMperiod variable definition from the top of 
  *    the program now that PWMperiod is being defined in the for loop?
  * 
