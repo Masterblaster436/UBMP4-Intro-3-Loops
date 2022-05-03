@@ -153,6 +153,8 @@ int main(void)
  *    Can you remove the global PWMperiod variable definition from the top of 
  *    the program now that PWMperiod is being defined in the for loop?
  * 
+      No because PWMperiod = 128; won't be defined.
+ 
  * 7. Add this code below the PWM loop to generate a tone:
                 
         // Change pitch
