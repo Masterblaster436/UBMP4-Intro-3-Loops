@@ -283,9 +283,65 @@ int main(void)
  *    code to make a 'soft-start' program that slowly increases the PWM on-time
  *    when you press a button. Can you make it turn off in a similar way?
  * 
+      // Increase brightness (LED4)
+    if(SW3 == 0) {
+            for(unsigned char TonLED4 = 255; TonLED4 != 0; TonLED4 --)
+        {
+            
+                 //PWM LED4 brightness
+                for(unsigned char PWMperiod = 255; PWMperiod != 0; PWMperiod --)
+                {
+                    if(TonLED4 == PWMperiod)
+                    {
+                        LED4 = 1;
+                    }
+                    __delay_us(20);
+                }
+                {
+                LED4 = 0;
+                }
+                
+            
+        }
+    }
+ 
  * 4. Make a program that creates an automated, electronic 'pulse', repeatedly
  *    brightening and dimming one or more LEDs.
  * 
+      for(unsigned char TonLED4 = 0; TonLED4 != 255; TonLED4 ++)
+        {
+            
+                 //PWM LED4 brightness
+                for(unsigned char PWMperiod = 255; PWMperiod != 0; PWMperiod --)
+                {
+                    if(TonLED4 == PWMperiod)
+                    {
+                        LED4 = 1;
+                    }
+                    __delay_us(20);
+                }
+                {
+                LED4 = 0;
+                } 
+        }
+
+        for(unsigned char TonLED4 = 255; TonLED4 != 0; TonLED4 --)
+        {
+            
+                 //PWM LED4 brightness
+                for(unsigned char PWMperiod = 255; PWMperiod != 0; PWMperiod --)
+                {
+                    if(TonLED4 == PWMperiod)
+                    {
+                        LED4 = 1;
+                    }
+                    __delay_us(20);
+                }
+                {
+                LED4 = 0;
+                } 
+        }
+ 
  * 5. Make a 'chirp' or 'pew-pew' sound effect by sweeping through a range of
  *    frequencies when a button is pressed.
  */
