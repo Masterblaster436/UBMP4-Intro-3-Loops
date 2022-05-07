@@ -344,4 +344,35 @@ int main(void)
  
  * 5. Make a 'chirp' or 'pew-pew' sound effect by sweeping through a range of
  *    frequencies when a button is pressed.
+ 
+ // Change pitch
+        if(SW4 == 0)
+        {
+    
+        period = 1;
+        __delay_ms(30);
+        period = 100;
+        __delay_ms(30);
+        period = 150;
+        __delay_ms(30);
+        period = 200;
+        __delay_ms(30);
+        period = 250;
+        __delay_ms(30);
+        period = 500;
+        __delay_ms(30);
+        period = 750;
+        __delay_ms(30);
+        period = 1000;
+        __delay_ms(30);
+            
+        }
+        
+        // Make a tone
+        for(unsigned char cycles = 50; cycles != 0; cycles--)
+        {
+            BEEPER = !BEEPER;
+            for(unsigned int p = period; p != 0; p--);
+        }
+ 
  */
